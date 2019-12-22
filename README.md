@@ -44,4 +44,16 @@ jemalloc 使用 chunk 儲存其他資料結構，及使用者請求的記憶體�
 
 一個 run 最多只有 2048 個位元組，一個 run 能追蹤記憶體的可用和已用地區 region，藉由呼叫 malloc 時返回的 heap 項目，則每個 run 關聯一個 bin，bin 負責儲存 run，而且 bin 又關聯一個 size dataType。
 
-
+             Arena 
+             
+         arena chunk list \
+         arena bin bins[]  \
+                            \
+               |           arena chunk1 - - -    arena run1 ---------
+               |           arena chunk2          arena run2          |
+               |                .                                    |
+                                .                                    |
+           Arena Bin            .                                    V
+                           arena chunkN                             Page1 --- region
+                                                                    Page2     region 
+                                                                    PageN     region
