@@ -66,4 +66,3 @@ jemalloc 使用 chunk 儲存其他資料結構，及使用者請求的記憶體�
 駭客利用 JS code 在序列化時修改了 DOM 樹狀結構，並且觸發漏洞的條件，再進一步執行任意程式碼。
 
                  
-                           arena chunkN                             Page1 --- region
