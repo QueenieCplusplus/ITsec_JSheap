@@ -57,3 +57,6 @@ jemalloc 使用 chunk 儲存其他資料結構，及使用者請求的記憶體�
                            arena chunkN                             Page1 --- region
                                                                     Page2     region 
                                                                     PageN     region
+# UAF
+
+當濫用了 DOM 的函數 XMLSerializer 程式碼當掉時，剛好程式設計時也沒有檢查何時會被呼叫，因此被駭客攻擊，其中此序列物件內的 Use After Free，此漏洞中剛好其他物件參考到一個 heap region，由於函數發生錯誤，忘記執行了清理記憶體，當原來的物件繼續使用時，這便導致了一個懸空的參照。
