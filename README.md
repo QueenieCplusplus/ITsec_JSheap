@@ -36,5 +36,7 @@ JavaScript 堆積
 
 # jemalloc
 
-被很多瀏覽器平台所支援，包含 Andorid、Linux、Os X、Windows 等，
-# jemalloc
+被很多瀏覽器平台所支援，包含 Andorid、Linux、Os X、Windows 等，jemalloc 將記憶體區分為固定大小的 chunk 區塊，依照不同平台，其 size 不同，可能有 1MB。
+
+jemalloc 使用 chunk 儲存其他資料結構，及使用者請求的記憶體，而為了緩解執行緒之間的
+
