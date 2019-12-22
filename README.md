@@ -17,18 +17,6 @@ JavaScript 堆積
 
   主要存放 process 裡函數的區域變數及其資料、中繼資料(連結資料)、函數溢出的暫存器。
 
-# Enhancement
-
-記憶體管理的防禦成為目前資安專家們需要精通的領域，這些包含如下:
-
-* cookies in heap
-
-* ASLR
-
-* DEP
-
-* SafeSEH
-
 # 記憶體分配器
 
 也稱為記憶體分配器，專門負責動態配置 heap 的虛擬記憶體，透過 malloc 函數或是系統其他
@@ -67,4 +55,14 @@ jemalloc 使用 chunk 儲存其他資料結構，及使用者請求的記憶體�
 
 https://github.com/QueenieCplusplus/ITsec_JSheap/blob/master/HeapDump.js
 
-                 
+# Enhancement
+
+記憶體管理的防禦成為目前資安專家們需要精通的領域，這些包含如下:
+
+* cookies in heap
+
+* ASLR
+
+* DEP
+
+* SafeSEH                 
