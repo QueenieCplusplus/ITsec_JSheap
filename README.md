@@ -40,5 +40,8 @@ JavaScript 堆積
 
 jemalloc 使用 chunk 儲存其他資料結構，及使用者請求的記憶體，而為了緩解執行緒之間的競鎖問題，jemalloc 採用 arenas 來管理 chunks。
 
+# chunk splits to runs
+
+一個 run 最多只有 2048 個位元組，一個 run 能追蹤記憶體的可用和已用地區 region，藉由呼叫 malloc 時返回的 heap 項目，則每個 run 關聯一個 bin，bin 負責儲存 run，而且 bin 又關聯一個 size dataType。
 
 
