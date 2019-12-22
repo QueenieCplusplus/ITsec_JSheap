@@ -17,7 +17,7 @@ JavaScript 堆積
 
   主要存放 process 裡函數的區域變數及其資料、中繼資料(連結資料)、函數溢出的暫存器。
 
-# Enhencement
+# Enhancement
 
 記憶體管理的防禦成為目前資安專家們需要精通的領域，這些包含如下:
 
